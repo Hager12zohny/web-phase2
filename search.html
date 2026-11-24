@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Events | EventHub</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body data-access="user">
+
+<header class="navbar" id="site-navbar"></header>
+
+<main class="container">
+
+  <div class="page-header">
+    <h1>Search events</h1>
+    <p>Filter events by entering one or more search criteria below.</p>
+  </div>
+
+  <form class="search-form" action="#" method="get">
+    <div class="search-grid">
+      <div class="form-group">
+        <label for="event_id">Event ID</label>
+        <input type="number" id="event_id" name="event_id" min="1" placeholder="e.g. 101">
+      </div>
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" placeholder="Event title keywords">
+      </div>
+      <div class="form-group">
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date">
+      </div>
+      <div class="form-group">
+        <label for="location">Location</label>
+        <input type="text" id="location" name="location" placeholder="City or venue">
+      </div>
+      <div class="form-group">
+        <label for="category">Category</label>
+        <select id="category" name="category">
+          <option value="">Any category</option>
+          <option value="conference">Conference</option>
+          <option value="workshop">Workshop</option>
+          <option value="meetup">Meetup</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="seats">Number of Seats</label>
+        <input type="number" id="seats" name="seats" min="1" placeholder="Minimum seats">
+      </div>
+    </div>
+    <div class="form-actions">
+      <button type="submit" class="btn">Search</button>
+      <button type="reset" class="btn btn-outline">Clear</button>
+    </div>
+  </form>
+
+  <h2 class="section-title">Search Results</h2>
+  <p class="muted">Sample search results shown for Phase 1. Dynamic database filtering will be implemented in Phase 2.</p>
+  <div class="table-wrap">
+    <table>
+      <caption>Matching Events</caption>
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Title</th>
+          <th scope="col">Date</th>
+          <th scope="col">Location</th>
+          <th scope="col">Category</th>
+          <th scope="col">Seats</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>101</td>
+          <td>Web Development Conference</td>
+          <td>2026-11-15</td>
+          <td>Cairo University</td>
+          <td><span class="badge badge-conference">Conference</span></td>
+          <td>200</td>
+          <td><a class="btn btn-small" href="eventdetails.html">View details</a></td>
+        </tr>
+        <tr>
+          <td>102</td>
+          <td>HTML and CSS Workshop</td>
+          <td>2026-11-22</td>
+          <td>Giza, Lab 3</td>
+          <td><span class="badge badge-workshop">Workshop</span></td>
+          <td>40</td>
+          <td><a class="btn btn-small" href="eventdetails.html">View details</a></td>
+        </tr>
+        <tr>
+          <td>103</td>
+          <td>Student Developers Meetup</td>
+          <td>2026-12-01</td>
+          <td>Cairo, Tech Hub</td>
+          <td><span class="badge badge-meetup">Meetup</span></td>
+          <td>60</td>
+          <td><a class="btn btn-small" href="eventdetails.html">View details</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</main>
+
+<footer class="footer" id="site-footer"></footer>
+<script src="js/storage.js"></script>
+<script src="js/session.js"></script>
+<script src="js/guard.js"></script>
+<script src="js/navbar.js"></script>
+</body>
+</html>

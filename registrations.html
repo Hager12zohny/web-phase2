@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrations | EventHub</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body data-access="admin">
+
+<header class="navbar" id="site-navbar"></header>
+
+<main class="container">
+
+  <div class="page-header">
+    <h1>Registration requests</h1>
+    <p>Accept or reject each registration request. A message for the user is required in both cases.</p>
+  </div>
+
+  <div class="request-list">
+
+    <article class="request-card">
+      <div class="request-info">
+        <h3>sara_m wants to join: Web Development Conference</h3>
+        <p class="meta">Event ID: 101 | Received: 2026-10-18 | Status: <span class="badge badge-pending">Pending</span></p>
+      </div>
+      <form action="#" method="post">
+        <div class="form-group">
+          <label for="msg1" class="required">Message to User</label>
+          <textarea id="msg1" name="message1" rows="2" required maxlength="200"
+                    placeholder="Enter reason or instructions (required for both accept and reject)"></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit" name="accept" class="btn btn-success">Accept</button>
+          <button type="submit" name="reject" class="btn btn-danger">Reject</button>
+        </div>
+      </form>
+    </article>
+
+    <article class="request-card">
+      <div class="request-info">
+        <h3>omar_k wants to join: HTML and CSS Workshop</h3>
+        <p class="meta">Event ID: 102 | Received: 2026-10-19 | Status: <span class="badge badge-pending">Pending</span></p>
+      </div>
+      <form action="#" method="post">
+        <div class="form-group">
+          <label for="msg2" class="required">Message to User</label>
+          <textarea id="msg2" name="message2" rows="2" required maxlength="200"
+                    placeholder="Enter reason or instructions (required for both accept and reject)"></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit" name="accept" class="btn btn-success">Accept</button>
+          <button type="submit" name="reject" class="btn btn-danger">Reject</button>
+        </div>
+      </form>
+    </article>
+
+    <article class="request-card">
+      <div class="request-info">
+        <h3>mona_h wants to join: Student Developers Meetup</h3>
+        <p class="meta">Event ID: 103 | Received: 2026-10-20 | Status: <span class="badge badge-pending">Pending</span></p>
+      </div>
+      <form action="#" method="post">
+        <div class="form-group">
+          <label for="msg3" class="required">Message to User</label>
+          <textarea id="msg3" name="message3" rows="2" required maxlength="200"
+                    placeholder="Enter reason or instructions (required for both accept and reject)"></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit" name="accept" class="btn btn-success">Accept</button>
+          <button type="submit" name="reject" class="btn btn-danger">Reject</button>
+        </div>
+      </form>
+    </article>
+  </div>
+
+  <h2 class="section-title">Past Decisions (Sample History)</h2>
+  <div class="request-list">
+    <article class="request-card">
+      <div class="request-info">
+        <h3>ahmed_s &mdash; Web Development Conference</h3>
+        <p class="meta">Status: <span class="badge badge-accepted">Accepted</span></p>
+        <p><strong>Message sent:</strong> Welcome! Your seat has been confirmed.</p>
+      </div>
+    </article>
+
+    <article class="request-card">
+      <div class="request-info">
+        <h3>laila_r &mdash; Student Developers Meetup</h3>
+        <p class="meta">Status: <span class="badge badge-rejected">Rejected</span></p>
+        <p><strong>Message sent:</strong> Sorry, this meetup has reached maximum capacity.</p>
+      </div>
+    </article>
+  </div>
+
+</main>
+
+<footer class="footer" id="site-footer"></footer>
+<script src="js/storage.js"></script>
+<script src="js/session.js"></script>
+<script src="js/guard.js"></script>
+<script src="js/navbar.js"></script>
+</body>
+</html>

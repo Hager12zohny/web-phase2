@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register for Event | EventHub</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body data-access="user">
+
+<header class="navbar" id="site-navbar"></header>
+
+<main class="container">
+
+  <div class="form-card">
+    <h1>Register for an event</h1>
+    <div class="info-box">
+      <strong>Selected: Web Development Conference</strong><br>
+      15 Nov 2026 &bull; Cairo University &bull; Conference &bull; 200 seats
+    </div>
+
+    <form action="myevents.html" method="post">
+      <div class="form-group">
+        <label for="fullname" class="required">Full Name</label>
+        <input type="text" id="fullname" name="fullname" required minlength="3" placeholder="Enter your full name">
+      </div>
+
+      <div class="form-group">
+        <label for="phone" class="required">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required pattern="[0-9+ ]{8,15}"
+               title="Use 8 to 15 digits" placeholder="e.g. 01012345678">
+      </div>
+
+      <div class="form-group">
+        <label for="reason">Reason for Attending (Optional)</label>
+        <textarea id="reason" name="reason" rows="3" maxlength="300" placeholder="Brief note to the event organizer"></textarea>
+      </div>
+
+      <div class="form-group checkbox-group">
+        <input type="checkbox" id="agree" name="agree" required>
+        <label for="agree">I confirm that I will attend if accepted</label>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn">Submit registration</button>
+        <a class="btn btn-outline" href="eventdetails.html">Cancel</a>
+      </div>
+    </form>
+    <p class="form-footer">You can track your registration status in <a href="myevents.html">My Events</a>.</p>
+  </div>
+
+</main>
+
+<footer class="footer" id="site-footer"></footer>
+<script src="js/storage.js"></script>
+<script src="js/session.js"></script>
+<script src="js/guard.js"></script>
+<script src="js/navbar.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | EventHub</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body data-access="user">
+
+<header class="navbar" id="site-navbar"></header>
+
+<main class="container">
+  <section class="hero">
+    <div class="hero-text">
+      <p class="hero-tag" id="hero-tag"></p>
+      <h1 id="hero-title">Your next event is waiting</h1>
+      <p class="hero-sub" id="hero-sub">Find a new event, register for it, and check if the organizer accepted your registration request.</p>
+      <div class="hero-actions" id="hero-actions"></div>
+    </div>
+    <div class="hero-shapes" id="hero-shapes"></div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Featured events</h2>
+    <div id="featured-events"></div>
+    <p class="center"><a class="btn btn-outline" id="see-all" href="login.html">See all events</a></p>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-card">
+      <span class="cta-badge">Ready to level up?</span>
+      <h2 class="cta-title">Reserve your spot before seats run out</h2>
+      <p class="cta-text">Every event is a chance to learn something new and meet new people. Browse the events and register for the ones you like.</p>
+      <div class="cta-actions">
+        <a class="cta-btn-white" href="events.html">Browse and register</a>
+        <a class="cta-btn-outline" href="myevents.html">View my registrations</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" id="site-footer"></footer>
+
+<script src="js/storage.js"></script>
+<script src="js/session.js"></script>
+<script src="js/guard.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

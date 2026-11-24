@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | EventHub</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body data-access="guest-only">
+
+<header class="navbar" id="site-navbar"></header>
+
+<main class="container">
+  <div class="auth-wrap">
+    <div class="auth-img" role="img" aria-label="Two people shaking hands"></div>
+    <div class="form-card">
+      <h1>Welcome back</h1>
+      <p class="subtitle">Log in to register for events or manage your events.</p>
+
+      <div id="form-msg" class="form-msg" role="alert"></div>
+
+      <form id="login-form">
+        <div class="form-group">
+          <label for="username" class="required">Username</label>
+          <input type="text" id="username" name="username" required autocomplete="username" placeholder="Your username">
+        </div>
+
+        <div class="form-group">
+          <label for="password" class="required">Password</label>
+          <input type="password" id="password" name="password" required autocomplete="current-password" placeholder="Your password">
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn">Log in</button>
+        </div>
+      </form>
+
+      <p class="form-footer">New to EventHub? <a href="signup.html">Create an account</a></p>
+    </div>
+  </div>
+</main>
+
+<footer class="footer" id="site-footer"></footer>
+
+<script src="js/storage.js"></script>
+<script src="js/session.js"></script>
+<script src="js/guard.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/form-ui.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

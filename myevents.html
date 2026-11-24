@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Events | EventHub</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body data-access="user">
+
+<header class="navbar" id="site-navbar"></header>
+
+<main class="container">
+
+  <div class="page-header">
+    <h1>My registered events</h1>
+    <p>Track all events you have registered for along with the organizer's decision and feedback message.</p>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <caption>My Registrations and Status</caption>
+      <thead>
+        <tr>
+          <th scope="col">Event</th>
+          <th scope="col">Date</th>
+          <th scope="col">Location</th>
+          <th scope="col">Status</th>
+          <th scope="col">Message from Organizer</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Web Development Conference</td>
+          <td>2026-11-15</td>
+          <td>Cairo University</td>
+          <td><span class="badge badge-accepted">Accepted</span></td>
+          <td>Welcome! Your seat is confirmed.</td>
+        </tr>
+        <tr>
+          <td>HTML and CSS Workshop</td>
+          <td>2026-11-22</td>
+          <td>Giza, Lab 3</td>
+          <td><span class="badge badge-pending">Pending</span></td>
+          <td>Waiting for the organizer to decide.</td>
+        </tr>
+        <tr>
+          <td>Student Developers Meetup</td>
+          <td>2026-12-01</td>
+          <td>Cairo, Tech Hub</td>
+          <td><span class="badge badge-rejected">Rejected</span></td>
+          <td>Sorry, this event is full. Please try another one.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="muted" style="margin-top: 20px;">Looking for more events? <a href="events.html">Browse all available events</a>.</p>
+
+</main>
+
+<footer class="footer" id="site-footer"></footer>
+<script src="js/storage.js"></script>
+<script src="js/session.js"></script>
+<script src="js/guard.js"></script>
+<script src="js/navbar.js"></script>
+</body>
+</html>

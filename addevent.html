@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Event | EventHub</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body data-access="admin">
+
+<header class="navbar" id="site-navbar"></header>
+
+<main class="container">
+
+  <div class="form-card form-wide">
+    <h1>Add a new event</h1>
+    <p class="subtitle">Fields marked with * are required.</p>
+
+    <form action="adminevents.html" method="post">
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="event_id" class="required">Event ID</label>
+          <input type="number" id="event_id" name="event_id" required min="1" placeholder="e.g. 107">
+        </div>
+        <div class="form-group">
+          <label for="date" class="required">Date</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="title" class="required">Title</label>
+        <input type="text" id="title" name="title" required maxlength="60" placeholder="Event title">
+      </div>
+
+      <div class="form-group">
+        <label for="location" class="required">Location</label>
+        <input type="text" id="location" name="location" required maxlength="60" placeholder="Event venue or city">
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="category" class="required">Category</label>
+          <select id="category" name="category" required>
+            <option value="">Choose a category</option>
+            <option value="conference">Conference</option>
+            <option value="workshop">Workshop</option>
+            <option value="meetup">Meetup</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="seats" class="required">Number of Seats</label>
+          <input type="number" id="seats" name="seats" required min="1" placeholder="Total available seats">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="description" class="required">Description</label>
+        <textarea id="description" name="description" rows="5" required maxlength="500" placeholder="Detailed description of the event (max 500 characters)"></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn">Add event</button>
+        <button type="reset" class="btn btn-outline">Clear form</button>
+      </div>
+    </form>
+  </div>
+
+</main>
+
+<footer class="footer" id="site-footer"></footer>
+<script src="js/storage.js"></script>
+<script src="js/session.js"></script>
+<script src="js/guard.js"></script>
+<script src="js/navbar.js"></script>
+</body>
+</html>
