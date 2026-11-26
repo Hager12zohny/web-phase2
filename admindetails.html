@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" href="images/logo.png">
 </head>
+
 <body data-access="admin">
 
 <header class="navbar" id="site-navbar"></header>
@@ -15,34 +17,70 @@
 <main class="container">
 
   <div class="details-box">
-    <div class="details-img img-conference" role="img" aria-label="Conference Event Image"></div>
-    <h1>Web Development Conference</h1>
-    <p><span class="badge badge-conference">Conference</span></p>
+
+    <div class="details-img img-conference" role="img"
+         aria-label="Event Image"></div>
+
+    <h1 id="details-title"></h1>
+
+    <p>
+      <span class="badge" id="details-category"></span>
+    </p>
 
     <table class="details-table">
-      <tr><th>Event ID</th><td>101</td></tr>
-      <tr><th>Date</th><td>2026-11-15</td></tr>
-      <tr><th>Location</th><td>Cairo University</td></tr>
-      <tr><th>Category</th><td>Conference</td></tr>
-      <tr><th>Number of Seats</th><td>200</td></tr>
+
+      <tr>
+        <th>Event ID</th>
+        <td id="details-id"></td>
+      </tr>
+
+      <tr>
+        <th>Date</th>
+        <td id="details-date"></td>
+      </tr>
+
+      <tr>
+        <th>Location</th>
+        <td id="details-location"></td>
+      </tr>
+
+      <tr>
+        <th>Category</th>
+        <td id="details-category-text"></td>
+      </tr>
+
+      <tr>
+        <th>Number of Seats</th>
+        <td id="details-seats"></td>
+      </tr>
+
     </table>
 
     <h2>About this event</h2>
-    <p>A full-day conference about modern web development. Talks cover HTML, CSS, accessibility, and web security. Lunch and an attendance certificate are provided for all attendees.</p>
+
+    <p id="details-description"></p>
 
     <div class="form-actions">
-      <a class="btn" href="editevent.html">Edit event</a>
-      <a class="btn btn-danger" href="deleteevent.html">Delete event</a>
+
+      <a class="btn" id="details-edit" href="#">Edit event</a>
+
+      <a class="btn btn-danger" id="details-delete" href="#">Delete event</a>
+
       <a class="btn btn-outline" href="adminevents.html">Back to events</a>
+
     </div>
+
   </div>
 
 </main>
 
 <footer class="footer" id="site-footer"></footer>
+
 <script src="js/storage.js"></script>
 <script src="js/session.js"></script>
 <script src="js/guard.js"></script>
 <script src="js/navbar.js"></script>
+<script src="js/admin-details.js"></script>
+
 </body>
 </html>

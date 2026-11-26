@@ -16,17 +16,12 @@
 
   <div class="form-card form-wide">
     <h1>Edit event</h1>
-    <div class="info-box">
-      You are editing: <strong>Event 101 &mdash; Web Development Conference</strong> (15 Nov 2026, Cairo University). Enter updated information below.
-    </div>
+    
 
-    <form action="adminevents.html" method="post">
+    <form id="edit-event-form">
 
       <div class="form-row">
-        <div class="form-group">
-          <label for="event_id" class="required">Event ID</label>
-          <input type="number" id="event_id" name="event_id" required min="1" placeholder="e.g. 101">
-        </div>
+    
         <div class="form-group">
           <label for="date" class="required">Date</label>
           <input type="date" id="date" name="date" required>
@@ -35,35 +30,36 @@
 
       <div class="form-group">
         <label for="title" class="required">Title</label>
-        <input type="text" id="title" name="title" required maxlength="60" placeholder="e.g. Web Development Conference">
+        <input type="text" id="title" name="title" required minlength="3" maxlength="80" placeholder="e.g. Web Development Conference">
       </div>
 
       <div class="form-group">
         <label for="location" class="required">Location</label>
-        <input type="text" id="location" name="location" required maxlength="60" placeholder="e.g. Cairo University">
+        <input type="text" id="location" name="location" required minlength="2" maxlength="60" placeholder="e.g. Cairo University">
       </div>
 
       <div class="form-row">
         <div class="form-group">
           <label for="category" class="required">Category</label>
           <select id="category" name="category" required>
-            <option value="">Choose a category</option>
-            <option value="conference">Conference</option>
-            <option value="workshop">Workshop</option>
-            <option value="meetup">Meetup</option>
+              <option value="">Choose a category</option>
+              <option value="Conference">Conference</option>
+              <option value="Workshop">Workshop</option>
+              <option value="Meetup">Meetup</option>
           </select>
         </div>
         <div class="form-group">
           <label for="seats" class="required">Number of Seats</label>
-          <input type="number" id="seats" name="seats" required min="1" placeholder="e.g. 200">
+          <input type="number" id="seats" name="seats" required min="1" max="10000" step="1" placeholder="e.g. 200">
         </div>
       </div>
 
       <div class="form-group">
         <label for="description" class="required">Description</label>
-        <textarea id="description" name="description" rows="5" required maxlength="500" placeholder="Detailed description of the event (max 500 characters)"></textarea>
+        <textarea id="description" name="description" rows="5" required minlength="20" maxlength="500" placeholder="Detailed description of the event (max 500 characters)"></textarea>
       </div>
 
+      <div id="form-msg" class="form-msg"></div>
       <div class="form-actions">
         <button type="submit" class="btn">Save changes</button>
         <a class="btn btn-outline" href="adminevents.html">Cancel</a>
@@ -78,5 +74,6 @@
 <script src="js/session.js"></script>
 <script src="js/guard.js"></script>
 <script src="js/navbar.js"></script>
+<script src="js/edit-event.js"></script>
 </body>
 </html>
