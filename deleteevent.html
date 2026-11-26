@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,39 +9,64 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" href="images/logo.png">
 </head>
+
 <body data-access="admin">
 
-<header class="navbar" id="site-navbar"></header>
+  <header class="navbar" id="site-navbar"></header>
 
-<main class="container">
+  <main class="container">
 
-  <div class="form-card">
-    <h1>Delete event</h1>
-    <div class="alert alert-danger">
-      <strong>Warning:</strong> Are you sure you want to delete this event? This action cannot be undone and will cancel all registered users.
-    </div>
+    <div class="form-card">
 
-    <table class="details-table">
-      <tr><th>ID</th><td>101</td></tr>
-      <tr><th>Title</th><td>Web Development Conference</td></tr>
-      <tr><th>Date</th><td>2026-11-15</td></tr>
-      <tr><th>Location</th><td>Cairo University</td></tr>
-    </table>
+      <h1>Delete event</h1>
 
-    <form action="adminevents.html" method="post">
+      <div class="alert alert-danger">
+        <strong>Warning:</strong> Are you sure you want to delete this event? This action cannot be undone and will cancel all registered users.
+      </div>
+
+      <table class="details-table">
+        <tr>
+          <th>ID</th>
+          <td id="delete-event-id"></td>
+        </tr>
+
+        <tr>
+          <th>Title</th>
+          <td id="delete-event-title"></td>
+        </tr>
+
+        <tr>
+          <th>Date</th>
+          <td id="delete-event-date"></td>
+        </tr>
+
+        <tr>
+          <th>Location</th>
+          <td id="delete-event-location"></td>
+        </tr>
+      </table>
+
+      <div id="delete-msg" class="form-msg"></div>
+
       <div class="form-actions">
-        <button type="submit" class="btn btn-danger">Yes, delete event</button>
+        <button type="button" class="btn btn-danger" id="confirm-delete">
+          Yes, delete event
+        </button>
+
         <a class="btn btn-outline" href="adminevents.html">Cancel</a>
       </div>
-    </form>
-  </div>
 
-</main>
+    </div>
 
-<footer class="footer" id="site-footer"></footer>
-<script src="js/storage.js"></script>
-<script src="js/session.js"></script>
-<script src="js/guard.js"></script>
-<script src="js/navbar.js"></script>
+  </main>
+
+  <footer class="footer" id="site-footer"></footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/session.js"></script>
+  <script src="js/guard.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/delete-event.js"></script>
+
 </body>
 </html>
